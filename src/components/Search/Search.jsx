@@ -10,7 +10,7 @@ const Search = ({ setUserName }) => {
       <MdSearch className="absolute-postion search-icon" />
       <input
         type="text"
-        placeholder="Enter Your Name"
+        placeholder="Enter Name Here...."
         className="input-text"
         onKeyPress={(evant) => nameHandle(evant)}
       />
