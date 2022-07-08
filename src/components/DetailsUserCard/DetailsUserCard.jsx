@@ -17,30 +17,48 @@ const DetailsUserCard = () => {
   }, [userName, currentpage]);
 
   const userDataFetch = async () => {
-    let data = await fetch(
-      `https://rickandmortyapi.com/api/character/?name=${userName}&page=${currentpage}`
-    );
-    let userInformation = await data.json();
-    setUsersData(
-      userInformation.results.slice(fistIndexOfElement, lastIndexOfElement)
-    );
-    console.log(usersData);
-    settotalDataPageLength(userInformation.results.length);
+    try {
+      let data = await fetch(
+        `https://rickandmortyapi.com/api/character/?name=${userName}&page=${currentpage}`
+      );
+      let userInformation = await data.json();
+      setUsersData(
+        userInformation.results.slice(fistIndexOfElement, lastIndexOfElement)
+      );
+      console.log(usersData);
+      settotalDataPageLength(userInformation.results.length);
+      
+    } catch (error) {
+      setUsersData(
+        usersData
+      );
+    }
   };
 
   let pages = [];
-  for (var i = 1; i <= Math.ceil(totalDataPageLength / itemPerpage); i++) {
+  for (var i = 1; i <Math.ceil(totalDataPageLength / itemPerpage); i++) {
     pages.push(i);
   }
 
   const handlePageNumber = (number) => {
-    setcurrentpage(
-      currentpage + number < 1
-        ? 1
-        : currentpage + number > currentpage
-        ? pages.length - 1
-        : currentpage + number
-    );
+    if(number==="next")
+    {
+      setcurrentpage(
+        currentpage+1
+      );
+
+    }else if(number==="pre")
+    {
+      setcurrentpage(
+        currentpage-1
+      );
+    }
+    else{
+      setcurrentpage(
+        number 
+      );
+    }
+    
   };
 
   return (

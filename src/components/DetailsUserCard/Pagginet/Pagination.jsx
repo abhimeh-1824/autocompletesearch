@@ -3,7 +3,7 @@ import "./pagginet.css";
 const Pagination = ({ pages, handlePageNumber }) => {
   return (
     <div className="max-width page-btn-contenair">
-      <button className="pages-btn" onClick={() => handlePageNumber(-1)}>
+      <button className="pages-btn" onClick={() => handlePageNumber("pre")}>
         Prev
       </button>
       {pages.map((pageNumber, index) => (
@@ -15,7 +15,7 @@ const Pagination = ({ pages, handlePageNumber }) => {
           {pageNumber}
         </button>
       ))}
-      <button className="pages-btn" onClick={() => handlePageNumber(1)}>
+      <button className="pages-btn" onClick={() => handlePageNumber("next")}>
         Next
       </button>
     </div>
