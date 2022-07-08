@@ -1,0 +1,29 @@
+.singleCard {
+  margin-top: 5px;
+  padding: 2%;
+  display: flex;
+  justify-content: space-around;
+  font-size: 0.7em;
+}
+.single-user-image {
+  width: 10%;
+  border-radius: 50%;
+}
+.left-img-container {
+  display: flex;
+}
+.user-name {
+  margin-left: 10px;
+  font-weight: 500;
+  font-size: 1.1em;
+  width: 50%;
+}
+.right-content-container {
+  width: 50%;
+  display: flex;
+  justify-content: end;
+}
+.alive-color {
+  color: green;
+  font-weight: bolder;
+}

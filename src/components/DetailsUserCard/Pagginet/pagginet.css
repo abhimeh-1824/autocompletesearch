@@ -1,0 +1,15 @@
+.pages-btn {
+  border: none;
+  outline: none;
+  margin: 5px 0 0 0;
+  padding: 2px;
+  background: none;
+  width: 50px;
+}
+.pages-btn:hover {
+  color: white;
+}
+
+.page-btn-contenair {
+  margin-top: 5px;
+}

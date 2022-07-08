@@ -1,0 +1,44 @@
+.modal-content {
+  border-radius: 10px;
+  width: 80%;
+  height: 300px;
+  margin-left: 9%;
+  margin-top: 50%;
+}
+.modal-image {
+  width: 30%;
+  border-radius: 50%;
+}
+.modal-header-text-cointener {
+  margin-left: 10px;
+  width: 50%;
+}
+.modal-user-name {
+  font-weight: 500;
+  font-size: 1.1em;
+}
+.btn-close {
+  font-size: 10px;
+  position: relative;
+  top: -4em;
+}
+.modal-body {
+  display: flex;
+  flex-direction: column;
+}
+.modal-hedings {
+  display: flex;
+  justify-content: space-around;
+}
+.modal-hedings div {
+  width: 50%;
+  text-align: center;
+}
+.modal-sub-headings {
+  font-size: 13px;
+  color: rgb(175, 183, 199);
+}
+.modal-heading {
+  font-size: 14px;
+  font-weight: bold;
+}
